@@ -179,11 +179,12 @@ class CsvParser implements ParserInterface
     protected function readRow(  )
     {
         $row = $this->file->fgetcsv();
-        // уберем нулевые колонки
-        $row = array_filter($row, function($val){
-            return $val <> '';
-        });
+       
         if (is_array($row)) {
+            // уберем нулевые колонки
+            $row = array_filter($row, function($val){
+                    return $val <> '';
+                    });
             // если есть заголовок, то перед конвертацией его нужно назначить
             if ($this->hasHeaderRow && $this->keys !== NULL) {
 
