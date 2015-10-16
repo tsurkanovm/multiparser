@@ -8,7 +8,7 @@ return
                     'converter_conf' => [
                     "float" => 'PRICE',
                     "integer" => 'QUANTITY',
-                    "string" => 'DESCR'
+                    "encode" => 'DESCR'
                     ]],
                 'basic_column' => [
                     "ARTICLE" => 'Артикул',

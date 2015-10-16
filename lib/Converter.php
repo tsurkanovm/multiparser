@@ -50,7 +50,7 @@ class Converter extends Behavior
         return $value;
     }
 
-    public static function convertToString($value)
+    public static function convertToEncode($value)
     {
         $res = $value;
         if (is_array($value)) {
